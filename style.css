@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07080d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(7, 8, 13, 0.85);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 130px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(88,101,242,0.18),
+            transparent 55%
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge,
+.section-label {
+    color: #7280ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 85px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #7280ff;
+
+    text-shadow:
+        0 0 30px rgba(88,101,242,0.35);
+}
+
+.hero p {
+    color: #9b9ca5;
+
+    font-size: 18px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #5865f2;
+
+    color: white;
+
+    box-shadow:
+        0 8px 25px rgba(88,101,242,0.25);
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(88,101,242,0.4);
+}
+
+.secondary {
+    color: white;
+
+    border: 1px solid #30323d;
+
+    background: rgba(255,255,255,0.02);
+}
+
+.secondary:hover {
+    transform: translateY(-4px);
+
+    background: #151720;
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 120px 25px;
+
+    text-align: center;
+}
+
+.section h2,
+.discord-section h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+}
+
+.section-text {
+    max-width: 700px;
+
+    margin: 12px auto;
+
+    color: #9b9ca5;
+}
+
+
+/* STAFF */
+
+.staff-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+.staff-card {
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #11131b,
+            #0c0d12
+        );
+
+    border: 1px solid #22242f;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.staff-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #5865f2;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.3);
+}
+
+.staff-icon {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.role {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #7280ff;
+
+    margin-bottom: 8px;
+}
+
+.staff-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+.staff-card p {
+    color: #777985;
+
+    font-size: 14px;
+}
+
+
+/* APPLICATION */
+
+.application-section {
+    max-width: none;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(88,101,242,0.12),
+            transparent 60%
+        );
+}
+
+.application-section .button {
+    margin-top: 25px;
+}
+
+
+/* DISCORD */
+
+.discord-section {
+    text-align: center;
+
+    padding: 110px 20px;
+
+    background: #0d0f16;
+
+    border-top: 1px solid #1d1f28;
+
+    border-bottom: 1px solid #1d1f28;
+}
+
+.discord-section p {
+    color: #92939d;
+
+    margin-bottom: 30px;
+}
+
+.discord-button {
+    background: #5865f2;
+
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 55px 20px;
+
+    color: #777985;
+}
+
+footer h3 {
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    nav {
+        padding: 17px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2,
+    .discord-section h2 {
+        font-size: 32px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
